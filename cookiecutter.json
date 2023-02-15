@@ -1,0 +1,25 @@
+{
+    "full_name": "Ivan Liu",
+    "email": "milktea736@gmail.com",
+    "website": "",
+    "use_as": ["library", "service"],
+    "project_name": "nameless",
+    "repo_name": "python-{{ cookiecutter.project_name|lower|replace(' ','-') }}",
+    "repo_hosting": ["github.com", "gitlab.com", "other domain not listed"],
+    "repo_hosting_domain": "{{ cookiecutter.repo_hosting if cookiecutter.repo_hosting != 'other domain not listed' else '' }}",
+    "repo_username": "milktea736",
+    "repo_main_branch": "main",
+    "package_name": "{{ cookiecutter.project_name|lower|replace(' ','_')|replace('-','_') }}",
+    "distribution_name": "{{ cookiecutter.package_name|replace('_','-') }}",
+    "project_short_description": "An example package. Generated with cookiecutter-pylibrary.",
+    "release_date": "today",
+    "year_from": "{% now 'utc', '%Y' %}",
+    "year_to": "{% now 'utc', '%Y' %}",
+    "version": "0.0.0",
+    "command_line_interface": ["click", "argparse", "plain", "no"],
+    "command_line_interface_bin_name": "{{ cookiecutter.distribution_name }}",
+    "sphinx_theme": ["sphinx-rtd-theme", "python-docs-theme", "sphinx-py3doc-enhanced-theme", "sphinx-book-theme", "furo", "pydata-sphinx-theme"],
+    "sphinx_docs_hosting": "https://{{ cookiecutter.repo_name|replace('.', '') }}.readthedocs.io/",
+
+    "_extensions": ["jinja2_time.TimeExtension"]
+}
