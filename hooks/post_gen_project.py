@@ -72,7 +72,6 @@ if __name__ == "__main__":
         git remote add origin git@{{ cookiecutter.repo_hosting_domain }}:{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}.git
         git push -u origin {{ cookiecutter.repo_main_branch }} v{{ cookiecutter.version }}
 
-        pip install pre-commit
         pre-commit install
 
 """)
