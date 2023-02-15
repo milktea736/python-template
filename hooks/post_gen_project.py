@@ -23,11 +23,6 @@ if __name__ == "__main__":
     src = cwd / 'src'
     ci = cwd / 'ci'
 
-
-    ci.joinpath('appveyor-with-compiler.cmd').unlink(missing_ok=True)
-    cwd.joinpath('appveyor.yml').unlink(missing_ok=True)
-    cwd.joinpath('.travis.yml').unlink(missing_ok=True)
-    src.joinpath('{{ cookiecutter.package_name }}', '_version.py').unlink(missing_ok=True)
     {%- if cookiecutter.use_as != 'service' %}
     shutil.rmtree(src.joinpath('restful'))
     {%- endif %}
