@@ -19,6 +19,7 @@ Concepts
 - Use ``python-dotenv`` to manage project configurations. This also provide the flexibility to modify configs when running in containers.
     | - ``.env`` is used to local developtment.
     | - ``deploy-env`` is used to deployment which will be copy into container.
+- Use ``MANIFEST.in`` to manage non-python files. Please see `packaging pitfalls <https://blog.ionelmc.ro/2014/06/25/python-packaging-pitfalls/>`_
 - Currently, the ``requirements.txt`` is used to demo. Please replace it with your project requirements.
     | - Use ``pipenv requirements --dev > requirements.txt`` or ``pipenv requirements > requirements.txt`` to generate your ``requirements.txt`` if you're using ``pipenv``.
 - Set ``pyenv local 3.8.13 3.9.14 3.10.7``, this makes tox discover your different python version if you're using ``pyenv``

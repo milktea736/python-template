@@ -61,13 +61,12 @@ if __name__ == "__main__":
 
         cd {{ cookiecutter.repo_name }}
         git init
+        pre-commit install
         git add --all
         git commit -m "Add initial project skeleton."
         git tag v{{ cookiecutter.version }}
         git remote add origin git@{{ cookiecutter.repo_hosting_domain }}:{{ cookiecutter.repo_username }}/{{ cookiecutter.repo_name }}.git
         git push -u origin {{ cookiecutter.repo_main_branch }} v{{ cookiecutter.version }}
-
-        pre-commit install
 
 """)
 
