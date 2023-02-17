@@ -24,7 +24,7 @@ if __name__ == "__main__":
     ci = cwd / 'ci'
 
     {%- if cookiecutter.use_as != 'service' %}
-    shutil.rmtree(src.joinpath('restful'))
+    shutil.rmtree(src.joinpath('{{cookiecutter.package_name}}', 'restful'))
     {%- endif %}
 
     print("""
