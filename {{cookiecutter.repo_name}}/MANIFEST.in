@@ -8,6 +8,7 @@ include .cookiecutterrc
 include .coveragerc
 include .editorconfig
 include .pre-commit-config.yaml
+include .env.prod
 include pyproject.toml
 include pytest.ini
 include tox.ini

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from restful.api.routes import router
+from {{cookiecutter.package_name}}.restful.api.routes import router
 
 
 def get_app() -> FastAPI:

@@ -7,11 +7,10 @@ ENV PYTHONPATH=${BASE_DIR}/src
 ENV PORT=80
 
 COPY ./requirements.txt ${BASE_DIR}/requirements.txt
-COPY ./env-deploy ${BASE_DIR}/.env
 COPY ./src ${BASE_DIR}/src
 
 RUN pip install --no-cache-dir --upgrade -r ${BASE_DIR}/requirements.txt
 
 {%- if cookiecutter.use_as == 'service' %}
-CMD ["sh", "-c", "uvicorn src.restful.app:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "uvicorn src.{{cookiecutter.package_name}}.restful.app:app --host 0.0.0.0 --port ${PORT}"]
 {%- endif %}
